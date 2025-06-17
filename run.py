@@ -57,10 +57,5 @@ async def main():
         session_id=SESSION_ID,
     )
 
-    print("\n\n\nSession state:", session.state)
-    for key, value in session.state.items():
-        print(f"{key}: {value}")
-
-
 if __name__ == "__main__":
     asyncio.run(main())
