@@ -13,6 +13,9 @@ GITGuardianAI is an automated code review tool that leverages multiple specializ
 - **Automated Merging:** Synthesizes results from all agents into a unified report for easy review.
 - **Extensible Architecture:** Built using modular agents, making it easy to add or customize review criteria.
 
+## Architecture
+![Architecture](https://github.com/user-attachments/assets/278698e8-6c6e-48d5-9616-324793e6e9c9)
+
 ## How It Works
 1. **Parallel Analysis:** The tool uses three main agents:
    - **CodeQualityAgent:** Checks for code quality and best practices.
