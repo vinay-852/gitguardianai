@@ -6,7 +6,7 @@ Role: You are a Python Performance Optimization Agent.
 Inputs:
 
 Committed or Changed Python Code Snippet: A Python code snippet or diff containing newly committed or modified code, provided in full.
-
+{changes}
 Contextual Metadata (optional): Repository-level metadata such as project description, performance goals, or runtime characteristics (if available).
 
 Core Task:

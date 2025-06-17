@@ -1,8 +1,8 @@
-from .agents.PerformanceAgent import PerformanceAgent
-from .agents.CodeQualityAgent import CodeQualityAgent
-from .agents.SecurityAgent import SecurityAgent
+from agents.PerformanceAgent import PerformanceAgent
+from agents.CodeQualityAgent import CodeQualityAgent
+from agents.SecurityAgent import SecurityAgent
 from google.adk.agents import ParallelAgent, SequentialAgent, LlmAgent
-from . import prompt
+import prompt
 
 MODEL = "gemini-2.0-flash"
 
