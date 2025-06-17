@@ -1,7 +1,7 @@
 from google.adk.agents import LlmAgent
 from . import prompt
 
-MODEL = "gemini-2.5-pro-preview-05-06"
+MODEL = "gemini-2.0-flash"
 
 PerformanceAgent = LlmAgent(
     model=MODEL,

@@ -1,8 +1,10 @@
-from agents.PerformanceAgent import PerformanceAgent
-from agents.CodeQualityAgent import CodeQualityAgent
-from agents.SecurityAgent import SecurityAgent
+from .agents.PerformanceAgent import PerformanceAgent
+from .agents.CodeQualityAgent import CodeQualityAgent
+from .agents.SecurityAgent import SecurityAgent
 from google.adk.agents import ParallelAgent, SequentialAgent, LlmAgent
-import prompt
+from . import prompt
+
+MODEL = "gemini-2.0-flash"
 
 parallel_review_agent = ParallelAgent(
     name="ParallelCodeReviewAgent",
@@ -12,8 +14,9 @@ parallel_review_agent = ParallelAgent(
 
 merger_agent = LlmAgent(
     name="CodeReviewMergerAgent",
+    model=MODEL,
     description="Merges results from CodeQuality, Performance, and Security agents into a single report.",
-    instructions=prompt.ORCHESTRATOR_AGENT_PROMPT,
+    instruction=prompt.ORCHESTRATOR_AGENT_PROMPT,
 )
 
 sequential_code_review_agent = SequentialAgent(
